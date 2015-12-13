@@ -27,7 +27,7 @@
       root.console.log('Command successfully loaded: %c'+phrase, debugStyle);
   };
 
-root.annyang = {
+root.fonixListen = {
     addCommands: function(commands) {
       var cb;
       for (var phrase in commands) {

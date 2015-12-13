@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', function () {
  //   speak("Hi there, I'm an inreractive assistant who can listen and talk to you, just click the search icon in the page, and you can"+
  //   " ask my directly what you want, another option you have is: you can write your question instead of speacking it");
 
-      if (annyang) {
-        annyang.addCommands(commands);
+      if (fonixListen) {
+        fonixListen.addCommands(commands);
     } else {
       alert('Commands recognation library is not installed');
     }
@@ -53,7 +53,7 @@ s.addEventListener("blur", function(e) {
 
 
 function redirect(spokentext) {
-  annyang.executeCommand(spokentext);
+  fonixListen.executeCommand(spokentext);
 
 }
 
