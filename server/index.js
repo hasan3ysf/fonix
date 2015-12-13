@@ -32,9 +32,11 @@ var server = require('http').createServer(function(request, response) {
   
 //  , serveHTML = require("./Modules/staticServer.js")
 //  , serveAPI  = require("./Modules/apiServer.js")
+    , wsAPI  = require("./Modules/wsServer.js")
   ;
  
 wss.on('connection', function(ws) {
+    setInterval(wsAPI(ws), 1000); // wsAPI(ws) => socket.send(+new Date);
     ws.on('message', function(message) {
         console.log('received: %s', message);
     });
