@@ -5,7 +5,7 @@
                console.log("WebSocket is supported by your Browser!");
                
                // Let us open a web socket
-               var ws = new WebSocket("ws://localhost:8125/echo");
+               var ws = new WebSocket("ws://localhost:8125/");
 				
                ws.onopen = function()
                {
@@ -17,7 +17,8 @@
                ws.onmessage = function (evt) 
                { 
                   var received_msg = evt.data;
-                  alert("Message is received..."+received_msg);
+                 // alert("Message is received..."+received_msg);
+                 console.log("Message is received..."+received_msg);
                };
 				
                ws.onclose = function()
