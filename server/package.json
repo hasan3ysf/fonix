@@ -1,0 +1,25 @@
+{
+  "name": "B+K SAP interaction",
+  "version": "0.1.0",
+  "description": "My very first package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hasan3ysf/myFonix.git"
+  },
+  "keywords": [
+       "voice",
+       "SQL",
+       "ws"
+],
+  "dependencies": {
+    "mssql": "*",
+    "sqlagent": "*",
+    "ws": "*"
+  },
+  "author": "Hasan A Yousef <hasan.ajsf@gmail.com> (http://fonix.tk)",
+  "license": "MIT"
+}
