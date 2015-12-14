@@ -1,4 +1,7 @@
-var server = require('http').createServer(function(request, response) {
+var   serveHTML = require("./Modules/staticServer.js")
+//  , serveAPI  = require("./Modules/apiServer.js")
+    , wsAPI  = require("./Modules/wsServer.js")
+    , server = require('http').createServer(function(request, response) {
                 console.log(request.url);
                 
      // If external connections allowed, need to overcome the CORS (Cross Origin Resource Sharing) policy //
@@ -14,25 +17,21 @@ var server = require('http').createServer(function(request, response) {
 	  // Set to true if you need the website to include cookies in the requests sent
 	  // to the API (e.g. in case you use sessions)
 	  response.setHeader('Access-Control-Allow-Credentials', true);
-  /*  
+    
         switch (request.url.indexOf("api")){
         case 1:
               console.log('api');
-              serveAPI(request, response);
+           //   serveAPI(request, response);
         break;
         default:
               serveHTML(request, response);
         break;           
-        } */
+        } 
   })
   , WebSocketServer = require('ws').Server
   , wss = new WebSocketServer({ server: server })
   , host = '172.0.0.1'
   , port = 8125
-  
-//  , serveHTML = require("./Modules/staticServer.js")
-//  , serveAPI  = require("./Modules/apiServer.js")
-    , wsAPI  = require("./Modules/wsServer.js")
   ;
  
 wss.on('connection', function(ws) {
