@@ -11,7 +11,7 @@ input[type=search] {
 
 /* Demo 2 */
 input[type=search] {
-  	background: #ededed url(http://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+  	background: #ededed url(../images/search-icon.png) no-repeat 9px center;
 	border: solid 1px #ccc;
 	border-radius: 10em;
 	transition: all .5s;

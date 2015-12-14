@@ -18,7 +18,7 @@ s.setAttribute('placeholder',"Speak (or write here) your question..");
 //s.className = "css-class-name"; // set the CSS class
 document.querySelector('#view').appendChild(s); // put it into the DOM
 
-var audio = new Audio('chrome/sounds/sound.mp3');
+var audio = new Audio('/sounds/sound.mp3');
 
 //Voice recognition
 var recognition = new webkitSpeechRecognition();
