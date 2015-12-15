@@ -9,6 +9,11 @@
          'regexp': /^(What is|What's|Could you please tell me|Could you please give me) the meaning of (TF|FFS|SF|SHF|FF|Tube Film|Shrink Film|Stretch Hood|Stretch Hood Film|Flat Film)$/,
          'callback': itemsIdentification,
    },
+   
+   'ML SoH': {
+         'regexp': /^(What is|What's|Could you please tell me|Could you please give me) the (stock|inventory) of ML$/,
+         'callback': mlSOH,
+   },
     
     'Report stock on hand': {
          'regexp': /^(What is|What's) (our|the) (stock|inventory|SoH) of (TF|FFS|SF|SHF|FF|Tube Film|Shrink Film|Stretch Hood|Stretch Hood Film|Flat Film)$/,

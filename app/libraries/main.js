@@ -92,7 +92,7 @@ function displayWindowSize() {
             w = window.innerWidth; //other browsers
           h = window.innerHeight;
     // your size calculation code here
-    if(w/h < 1.5786) alert('pls do not resize your screen further');
+  //  if(w/h < 1.5786) alert('pls do not resize your screen further');
     console.log(w + "x" + h);
 };
 

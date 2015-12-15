@@ -1,3 +1,28 @@
+var mlSOH = function(){
+     // var item = RegExp.$4;
+
+        var xmlhttp = new XMLHttpRequest();
+        var url = "http://127.0.0.1:8125/api/mlSoH";
+
+        xmlhttp.onreadystatechange=function()
+              {
+                  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                    {
+                         console.log(xmlhttp.responseText);
+                         var myArr = JSON.parse(xmlhttp.responseText);
+                //  document.getElementById("ML").innerHTML = 'ML SoH: '+myArr[0].OnHand;
+ 
+                            speak('The inventory of ML is: '+myArr[0].OnHand);
+                            alert('The inventory of ML is: '+myArr[0].OnHand);
+                     //    document.getElementById("myDiv").innerHTML=myArr.name;
+                     }
+              }
+        xmlhttp.open("POST",url,true);
+
+//xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");  // this work only from server, access required to be added if not from the same server
+        xmlhttp.send();
+};
+  
 var SoH = function(){
       var item = RegExp.$4;
       speak('The stock of: '+item+' is not known so far');

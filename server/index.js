@@ -1,5 +1,5 @@
 var   serveHTML = require("./Modules/staticServer.js")
-//  , serveAPI  = require("./Modules/apiServer.js")
+    , serveAPI  = require("./Modules/apiServer.js")
     , wsAPI  = require("./Modules/wsServer.js")
     , server = require('http').createServer(function(request, response) {
                 console.log(request.url);
@@ -20,8 +20,7 @@ var   serveHTML = require("./Modules/staticServer.js")
     
         switch (request.url.indexOf("api")){
         case 1:
-              console.log('api');
-           //   serveAPI(request, response);
+              serveAPI(request, response);
         break;
         default:
               serveHTML(request, response);
@@ -37,8 +36,9 @@ var   serveHTML = require("./Modules/staticServer.js")
 wss.on('connection', function(ws) {
  //   setInterval(wsAPI(ws), 1000); // wsAPI(ws) => socket.send(+new Date);
    setInterval(function(){
-          console.log(wsAPI);
-          ws.send('hi');
+        wsAPI.items(ws);
+      //  console.log(x);
+        //  ws.send(x);
      }, 1000);
     ws.on('message', function(message) {
         console.log('received: %s', message);
